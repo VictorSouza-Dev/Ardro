@@ -1,0 +1,30 @@
+<header class="header">
+  <a routerLink="/" class="brand">
+    <img class="logo" src="/logo-ardro.png" alt="Logo Ardro" />
+    <div class="brand-text">
+      <h1>Ardro</h1>
+      <p>Arquitetura e Engenharia</p>
+    </div>
+  </a>
+
+  <nav class="navigation">
+    <ul class="menu">
+      <li>
+        <a
+          class="link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a class="link" routerLink="/projects">Projetos</a>
+      </li>
+      <li>
+        <a class="link" routerLink="/about">Sobre nós</a>
+      </li>
+    </ul>
+  </nav>
+</header>
