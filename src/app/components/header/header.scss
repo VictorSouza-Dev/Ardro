@@ -1,4 +1,4 @@
-@use '../../../styles/variables';
+@use '../../../styles/variables' as *;
 
 $breakpoint-tablet: 1024px;
 $breakpoint-mobile: 768px;
@@ -13,12 +13,21 @@ $breakpoint-mobile: 768px;
 
   background: linear-gradient(
     to bottom,
-    #d7b1ba 0%,
-    #e7ccd2 20%,
-    #f4e7ea 45%,
-    #fcf9fa 70%,
-    #ffffff 100%
+    $green-300 0%,
+    $green-200 20%,
+    $green-100 45%,
+    $green-50 70%,
+    $white 100%
   );
+
+  // background: linear-gradient(
+  //   to bottom,
+  //   #d7b1ba 0%,
+  //   #e7ccd2 20%,
+  //   #f4e7ea 45%,
+  //   #fcf9fa 70%,
+  //   #ffffff 100%
+  // );
 
   @media (max-width: $breakpoint-tablet) {
     padding: 1.5rem 3rem;
@@ -35,7 +44,7 @@ $breakpoint-mobile: 768px;
   gap: 1rem;
 
   text-decoration: none;
-  color: variables.$pink-1000;
+  color: $pink-1000;
   cursor: pointer;
 
   .logo {
@@ -60,8 +69,8 @@ $breakpoint-mobile: 768px;
 }
 
 .brand-text {
-  font-family: variables.$font-cinzel;
-  color: variables.$pink-900;
+  font-family: $font-cinzel;
+  color: $pink-900;
 
   h1 {
     margin: 0;
@@ -81,6 +90,7 @@ $breakpoint-mobile: 768px;
     margin: 0.35rem 0 0;
     font-size: 1.2rem;
     line-height: 1;
+    font-weight: 500;
 
     @media (max-width: $breakpoint-mobile) {
       font-size: 0.9rem;
@@ -121,7 +131,7 @@ $breakpoint-mobile: 768px;
       top: 90px;
       left: 0;
       width: 100%;
-      background: #ffffff;
+      background: $white;
       padding: 2rem;
       gap: 2rem;
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
@@ -134,7 +144,7 @@ $breakpoint-mobile: 768px;
   position: relative;
   display: inline-block;
 
-  color: variables.$pink-900;
+  color: $pink-900;
   text-decoration: none;
   transition:
     color 0.25s ease,
@@ -148,14 +158,14 @@ $breakpoint-mobile: 768px;
     bottom: -8px;
     width: 0;
     height: 2px;
-    background: variables.$pink-900;
+    background: $pink-900;
     transform: translateX(-50%);
     transition: width 0.25s ease;
   }
 
   &:hover {
     transform: translateY(-4px);
-    color: variables.$pink-900;
+    color: $pink-900;
   }
 
   &:hover::after {
@@ -163,7 +173,7 @@ $breakpoint-mobile: 768px;
   }
 
   &.active {
-    color: variables.$pink-900;
+    color: $pink-900;
   }
 
   &.active::after {

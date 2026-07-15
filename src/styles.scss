@@ -1,4 +1,4 @@
-@use 'styles/variables';
+@use 'styles/variables' as *;
 
 *,
 *::before,
@@ -14,9 +14,9 @@ html {
 }
 
 body {
-  font-family: variables.$font-montserrat;
-// background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-//                     url('/imagemDireita.jpeg');  color: variables.$pink-700;
+  font-family: $font-montserrat;
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+  //                     url('/imagemDireita.jpeg');  color: variables.$pink-700;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -47,4 +47,25 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+//largura da barra
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+//fundo da barra
+::-webkit-scrollbar-track {
+  background: $green-100;
+}
+
+//parte que se move
+::-webkit-scrollbar-thumb {
+  background: $pink-900;
+  border-radius: 10px;
+}
+
+//quando passa o mouse
+::-webkit-scrollbar-thumb:hover {
+  background: $pink-1000;
 }
